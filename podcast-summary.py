@@ -162,7 +162,12 @@ def process_podcasts():
                     print(f"Transkript für {file} scheint unvollständig zu sein.")
                     continue
                 
-                language = "deutsch"
+                # Sprache prüfen
+                language = detect_language(transcript)
+                if not language:
+                    print(f"Konnte Sprache für {file} nicht erkennen, verwende Deutsch als Standard")
+                    language = "deutsch"
+                
                 markdown = summarize_text(transcript, language, file)
                 if markdown:
                     with open(expected_summary_file, "w", encoding="utf-8") as f:

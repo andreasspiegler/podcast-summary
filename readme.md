@@ -81,11 +81,22 @@ Die generierten Zusammenfassungen enthalten:
 4. Wichtige Personen und Unternehmen (falls relevant)
 5. Lektionen für Produktmanager, Business Designer und UX-Strategen (falls relevant)
 
+## Features
+
+- Unterstützt verschiedene Audio-Formate (MP3, MP4, WAV, etc.)
+- Automatische Transkription mit OpenAI Whisper
+- Strukturierte Zusammenfassungen mit GPT-4
+- Zusammenfassungen werden immer auf Deutsch erstellt
+- Intelligente Verarbeitung langer Audio-Dateien (10-Minuten-Chunks)
+- Automatische Erstellung fehlender Verzeichnisse
+
 ## Hinweise
-- Das Skript verarbeitet Audio-Dateien in Chunks von 10 Minuten
+
+- Das Skript prüft automatisch alle Voraussetzungen beim Start
 - Bereits verarbeitete Dateien werden übersprungen
-- Du kannst auch direkt Transkript-Dateien (.txt) im input-Verzeichnis ablegen
-- Die Zusammenfassungen werden auf Deutsch erstellt, auch wenn das Original in Englisch ist
+- Audio-Dateien werden in 10-Minuten-Chunks verarbeitet
+- Zusammenfassungen werden immer auf Deutsch erstellt, auch wenn das Original in Englisch ist
+- Die Verzeichnisse `input` und `output` werden automatisch erstellt, falls sie nicht existieren
 
 ## Fehlerbehebung
 Falls Fehler auftreten:
